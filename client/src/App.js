@@ -11,6 +11,21 @@ const styles = {
 };
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      articles: []
+    };
+
+    this.addScrapedDataToState = this.addScrapedDataToState.bind(this);
+  }
+
+  addScrapedDataToState(scrapedData) {
+    this.setState({
+      articles: scrapedData
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -28,8 +43,8 @@ class App extends Component {
           >
             <div style={{ marginTop: "100px" }}>New York Times Search</div>
           </Well>
-          <Searchbox />
-          <Searchresults />
+          <Searchbox addScrapedDataToState={this.addScrapedDataToState} />
+          <Searchresults articles={this.state.articles} />
         </div>
       </div>
     );
