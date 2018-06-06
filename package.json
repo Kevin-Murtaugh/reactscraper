@@ -24,6 +24,7 @@
     "cors": "^2.8.4",
     "express": "^4.15.4",
     "phantom": "^4.0.12",
+    "react-bootstrap-validation": "^0.1.11",
     "request": "^2.87.0"
   },
   "repository": {
