@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const ny_scraper = require("./scraper/nytimes_scraper");
 
-app.use(cors());
+app.use(cors());yar
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
